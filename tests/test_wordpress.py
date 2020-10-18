@@ -15,7 +15,7 @@ def test_ability_to_add_a_comment(browser: WebDriver):
     comment_text = str(uuid.uuid4())
     author = 'Test'
 
-    post_page.post_comment(comment_text, author, 'lol@nope.com')
+    post_page.post_comment(comment_text, author, 'lol@nope.com', 'https://www.google.com')
 
     while len(post_page.get_comments_list()) == 1:
         time.sleep(1)
